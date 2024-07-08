@@ -13,19 +13,32 @@ hostname = fjydfe.kasitesoft.com
 */
 
 
-const $ = new Env(`eryuan`);
+const $ = new Env(`二院`);
 $.msg('二院抓包', ``, "");
 const cookie = $.getdata("eryuan") || ($.isNode() && process.env['eryuan']) || ''; //  eryuan Cookie
 
 const barkKey = 'RCw8k5KtoUa7ucga6XexuS'; // bark key
 
+if (typeof $request !== 'undefined') {
+    getToken();
+} else if (!cookie) {
+    $.msg($.name, ``, `二院token 失效/未获取 ⚠️`);
+    $.done();
+} else {
+    getToken();
+}
 
-let token = $request.headers.token;
-$.msg('二院token捕获：', ``,token);
+async function getToken(){
+
+    let token = $request.headers.token;
+    $.msg('二院token捕获：', ``,token);
 //$.msg('二院测试', ``, JSON.stringify(hr));
-updateToken($,token);
-BarkNotify($, barkKey, $.name, "二院token为"+token);
-$.done();
+    await updateToken($,token);
+    await BarkNotify($, barkKey, $.name, "二院token为"+token);
+    $.done();
+}
+
+
 
 async function updateToken(tool,a){
     let result = await tool.http.get('192.168.0.1:18080/hos/updateToken?token='+token).then(response => {
