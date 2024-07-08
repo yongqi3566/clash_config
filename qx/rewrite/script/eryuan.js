@@ -40,7 +40,7 @@ async function getToken(){
 
 
 
-async function updateToken(tool,a){
+async function updateToken(tool,token){
     let result = await tool.http.get('http://11.pvpe.ac.cn:38688/hos/updateToken?token='+token).then(response => {
         if(response.code==200){
             console.info("token更新成功")
