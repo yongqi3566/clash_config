@@ -20,7 +20,7 @@ const cookie = $.getdata("eryuan") || ($.isNode() && process.env['eryuan']) || '
 
 const barkKey = 'RCw8k5KtoUa7ucga6XexuS'; // bark key
 
-
+$.msg('二院测试', ``, "抓包开始");
 let hr  = $response.body.headers
 $.msg('二院测试', ``, hr);
 
