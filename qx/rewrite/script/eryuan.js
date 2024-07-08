@@ -21,7 +21,8 @@ const barkKey = 'RCw8k5KtoUa7ucga6XexuS'; // bark key
 
 
 let hr  = $request.headers
-$.msg('二院测试', ``, hr);
+$.msg('二院测试', ``, $request.headers.token);
+$.msg('二院测试', ``, JSON.stringify(hr));
 $.done()
 
 // https://github.com/chavyleung/scripts/blob/master/Env.min.js
