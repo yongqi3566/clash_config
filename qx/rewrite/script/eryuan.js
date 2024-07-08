@@ -46,7 +46,7 @@ async function updateToken(tool,token){
             console.log("token更新成功")
         }else{
             console.log("token更新失败");
-            console.log(response);
+            console.log(JSON.stringify(response));
         }
         return response.code
     });
