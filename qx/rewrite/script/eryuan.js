@@ -33,15 +33,15 @@ async function getToken(){
     let token = $request.headers.token;
     $.msg('二院token捕获：', ``,token);
 //$.msg('二院测试', ``, JSON.stringify(hr));
-    await updateToken($,token);
-    await BarkNotify($, barkKey, $.name, "二院token为"+token);
+    updateToken($,token);
+    BarkNotify($, barkKey, $.name, "二院token为"+token);
     $.done();
 }
 
 
 
 async function updateToken(tool,a){
-    let result = await tool.http.get('192.168.0.1:18080/hos/updateToken?token='+token).then(response => {
+    let result = await tool.http.get('http://11.pvpe.ac.cn:38688/hos/updateToken?token='+token).then(response => {
         if(response.code==200){
             console.info("token更新成功")
         }else{
