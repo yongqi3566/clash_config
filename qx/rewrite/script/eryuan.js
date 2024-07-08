@@ -47,7 +47,7 @@ async function updateToken(tool,token){
             console.log(JSON.stringify(response));
         }
         let bd = JSON.parse(response.body);
-        if(bd.code==200){
+        if(bd.errcode==0){
             console.log("token更新成功")
         }else{
             console.log("token更新失败");
