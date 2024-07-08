@@ -5,10 +5,9 @@
 *******************************
 [rewrite_local]
 # > er yuan token 获取
-^https?:\/\/fjjkm1\.nebulabd\.cn\/ebus\/jkm\/health-code\/healthcode\/healthcode\/getNucleicAcidResult$ url script-response-body https://raw.githubusercontent.com/pixia1234/QX/main/1.js
 ^https?:\/\/fjydfe\.kasitesoft\.com\/wsgw\/sys\/confgApi\/GetSysConfig\/callApiJSON\.do$ url script-request-header https://raw.githubusercontent.com/yongqi3566/clash_config/main/qx/rewrite/script/eryuan.js
 * [mitm]
-hostname = fjjkm1.nebulabd.cn
+hostname = fjydfe.kasitesoft.com
 *
 *
 */
