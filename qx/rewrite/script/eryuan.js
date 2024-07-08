@@ -13,14 +13,14 @@ hostname = fjydfe.kasitesoft.com
 */
 
 
-const $ = new Env(`哔哩哔哩漫画`);
+const $ = new Env(`eryuan`);
 $.msg('二院测试', ``, "抓包开始");
 const cookie = $.getdata("eryuan") || ($.isNode() && process.env['eryuan']) || ''; //  eryuan Cookie
 
 const barkKey = 'RCw8k5KtoUa7ucga6XexuS'; // bark key
 
 
-let hr  = $response.headers
+let hr  = $request.headers
 $.msg('二院测试', ``, hr);
 $.done()
 
