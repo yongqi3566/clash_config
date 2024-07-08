@@ -42,11 +42,16 @@ async function getToken(){
 
 async function updateToken(tool,token){
     let result = await tool.http.get('http://11.pvpe.ac.cn:38688/hos/updateToken?token='+token).then(response => {
-        if(response.code==200){
+        if(response.status!=200){
+            console.log("token请求失败");
+            console.log(JSON.stringify(response));
+        }
+        let bd = JSON.parse(response.body);
+        if(bd.code==200){
             console.log("token更新成功")
         }else{
             console.log("token更新失败");
-            console.log(JSON.stringify(response));
+            console.log(JSON.stringify(bd));
         }
         return response.code
     });
