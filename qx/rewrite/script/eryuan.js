@@ -14,7 +14,7 @@ hostname = fjydfe.kasitesoft.com
 
 
 const $ = new Env(`二院`);
-$.msg('二院抓包', ``, "");
+//$.msg('二院抓包', ``, "");
 const cookie = $.getdata("eryuan") || ($.isNode() && process.env['eryuan']) || ''; //  eryuan Cookie
 
 const barkKey = 'RCw8k5KtoUa7ucga6XexuS'; // bark key
@@ -43,14 +43,14 @@ async function getToken(){
 async function updateToken(tool,token){
     let result = await tool.http.get('http://11.pvpe.ac.cn:38688/hos/updateToken?token='+token).then(response => {
         if(response.status!=200){
-            console.log("token请求失败");
+            console.log(" 🔷token请求失败");
             console.log(JSON.stringify(response));
         }
         let bd = JSON.parse(response.body);
         if(bd.errcode==0){
-            console.log("token更新成功")
+            console.log(" 🔷token更新成功")
         }else{
-            console.log("token更新失败");
+            console.log("🔷token更新失败");
             console.log(JSON.stringify(bd));
         }
         return response.code
