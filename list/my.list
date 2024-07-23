@@ -37,3 +37,5 @@ DOMAIN-SUFFIX,codeium.com
 DOMAIN-SUFFIX,aliyunpan1.com
 #涂鸦homeassistant鉴权
 DOMAIN-SUFFIX,apigw.iotbing.com
+#docker hub
+DOMAIN-SUFFIX,d36jcksde1wxzq.cloudfront.net
