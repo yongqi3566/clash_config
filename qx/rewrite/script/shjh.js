@@ -18,12 +18,12 @@ const $ = new Env(`sh`);
 
 var body = $response.body;
 //$.msg('获取js：', ``,body);
-body.replace("ZF0003113143D","YSM202211296760850");
-body.replace("ZF0028985831r","YSM202211296760850");
+body=body.replace("ZF0003113143D","YSM202211296760850");
+body=body.replace("ZF0028985831r","YSM202211296760850");
 
-//$.msg('修改后js：', ``,body);
+$.msg('修改后js：', ``,body);
 $done({ body });
-$.done();
+//$.done();
 
 
 
