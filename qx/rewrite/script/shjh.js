@@ -6,6 +6,8 @@
 [rewrite_local]
 # > jh
 ^https:\/\/res\.yunbusiness\.ccb\.com\/jhshCouponWebConfig\.js.*$ url script-response-body https://raw.githubusercontent.com/yongqi3566/clash_config/main/qx/rewrite/script/shjh.js
+*
+* 我的账号 YSM202211296760850
 [mitm]
 hostname = res.yunbusiness.ccb.com
 *
@@ -15,9 +17,11 @@ hostname = res.yunbusiness.ccb.com
 const $ = new Env(`sh`);
 
 var body = $response.body;
+//$.msg('获取js：', ``,body);
+body.replace("ZF0003113143D","YSM202211296760850");
+body.replace("ZF0028985831r","YSM202211296760850");
 
-$.msg('获取js：', ``,body);
-
+//$.msg('修改后js：', ``,body);
 $done({ body });
 $.done();
 
