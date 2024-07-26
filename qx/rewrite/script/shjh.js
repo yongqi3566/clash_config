@@ -12,7 +12,8 @@ hostname = res.yunbusiness.ccb.com
 *
 */
 
+console.info("获取js")
 var body = $response.body;
-consol.info(body)
+console.info("body")
 
 $done({ body });
