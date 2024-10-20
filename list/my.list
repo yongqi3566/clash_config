@@ -39,3 +39,8 @@ DOMAIN-SUFFIX,aliyunpan1.com
 DOMAIN-SUFFIX,apigw.iotbing.com
 #docker hub
 DOMAIN-SUFFIX,d36jcksde1wxzq.cloudfront.net
+#plex
+DOMAIN-SUFFIX,metadata.provider.plex.tv
+DOMAIN-SUFFIX,analytics.plex.tv
+DOMAIN-SUFFIX,metadata-static.plex.tv
+DOMAIN-SUFFIX,meta.plex.tv
