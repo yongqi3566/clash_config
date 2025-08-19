@@ -42,6 +42,7 @@ DOMAIN-SUFFIX,greasyfork.org
 DOMAIN-SUFFIX,apigw.iotbing.com
 #docker hub
 DOMAIN-SUFFIX,d36jcksde1wxzq.cloudfront.net
+DOMAIN-SUFFIX,dockerstatic.com
 #plex
 DOMAIN-SUFFIX,metadata.provider.plex.tv
 DOMAIN-SUFFIX,analytics.plex.tv
