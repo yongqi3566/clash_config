@@ -23,6 +23,7 @@ async function getInfo(){
 
     let myheaders = $request.headers;
     let mybody = $request.body;
+    $.msg('url地址：', ``, $request.url);
     $.msg('头信息捕获：', ``, JSON.stringify(myheaders));
     $.msg('内容捕获：', ``, mybody);
 //$.msg('二院测试', ``, JSON.stringify(hr));
