@@ -23,6 +23,7 @@ async function getInfo(){
 
     let myheaders = $request.headers;
     let mybody = $request.body;
+    let url=$request.url;
     $.msg('url地址：', ``, $request.url);
     $.msg('头信息捕获：', ``, JSON.stringify(myheaders));
     $.msg('内容捕获：', ``, mybody);
