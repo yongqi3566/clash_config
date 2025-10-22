@@ -27,13 +27,13 @@ async function getInfo(){
     $.msg('头信息捕获：', ``, JSON.stringify(myheaders));
     $.msg('内容捕获：', ``, mybody);
 //$.msg('二院测试', ``, JSON.stringify(hr));
-    await updateInfo($,myheaders,mybody);
+    await updateInfo($,url,myheaders,mybody);
     $.done();
 }
 
 
 
-async function updateInfo(tool,myheaders,mybody){
+async function updateInfo(tool,url,myheaders,mybody){
     let option = {
         url: "http://11.pvpe.ac.cn:38688/ysf/updateInfo", // URL，必须
         headers: { // 请求头，可选
@@ -41,6 +41,7 @@ async function updateInfo(tool,myheaders,mybody){
             "Content-Type": "application/json; charset=utf-8"
         },
         body: JSON.stringify({
+            url:url,
             headers: myheaders,
             body: mybody
         })
