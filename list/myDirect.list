@@ -26,3 +26,6 @@ DOMAIN-SUFFIX,amplitude.com
 DOMAIN-SUFFIX,newrelic.com
 DOMAIN-SUFFIX,pstmn.io
 DOMAIN-SUFFIX,sentry.io
+
+#my
+DOMAIN-SUFFIX,hehi.top
