@@ -23,7 +23,7 @@ const $ = new Env(`lechange`);
 const barkKey = 'RCw8k5KtoUa7ucga6XexuS'; // bark key
 const envApi = 'http://11.pvpe.ac.cn:38688/qinglong/updateEnv'; // 青龙环境变量更新接口
 const envName = 'LECHENG_TOKEN'; // 青龙脚本 lecheng_sign.py 读取的环境变量名
-
+console.log('开始乐橙捕获');
 getInfo();
 
 async function getInfo() {
